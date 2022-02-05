@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contactless" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="79L-sX-cKb">
+                                <rect key="frame" x="33" y="448" width="348" height="20.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20.5" id="4qi-kI-B5C"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20.5" id="6bU-ec-3zD"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20.5" id="Kh2-nX-N1W"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="348" id="OXC-V9-3bw"/>
+                                    <constraint firstAttribute="width" constant="348" id="QUE-vV-5Qb"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="348" id="XMn-TM-kAg"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="348" id="yd7-7R-42x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtE-Hf-RWz">
+                                <rect key="frame" x="158" y="409" width="99" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="99" id="6IC-Zg-uso"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Go"/>
+                                <connections>
+                                    <action selector="openWhatsApp:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hAK-Yv-lEQ"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bG0-tx-8LI" customClass="FPNTextField" customModule="FlagPhoneNumber">
+                                <rect key="frame" x="191" y="476" width="32" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IAi-vQ-HoJ">
+                                <rect key="frame" x="67" y="34" width="240" height="240"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" image="YES" notEnabled="YES"/>
+                                </accessibility>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="79L-sX-cKb" secondAttribute="bottom" constant="198.5" id="0tF-LS-voL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WtE-Hf-RWz" secondAttribute="trailing" constant="157" id="4fL-qn-arz"/>
+                            <constraint firstItem="WtE-Hf-RWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="5Zf-nC-VGc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WtE-Hf-RWz" secondAttribute="trailing" constant="157" id="Cna-g0-yRg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="79L-sX-cKb" secondAttribute="trailing" constant="33" id="I6x-Xx-IJV"/>
+                            <constraint firstItem="WtE-Hf-RWz" firstAttribute="centerX" secondItem="bG0-tx-8LI" secondAttribute="centerX" id="MC5-9Z-Ho8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="79L-sX-cKb" secondAttribute="trailing" constant="33" id="WvH-jY-WFH"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="Zaf-wu-ixK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="79L-sX-cKb" secondAttribute="trailing" constant="33" id="a7c-zv-3kh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="79L-sX-cKb" secondAttribute="trailing" constant="33" id="bxI-6O-or3"/>
+                            <constraint firstItem="WtE-Hf-RWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="cdK-EE-yen"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WtE-Hf-RWz" secondAttribute="trailing" constant="157" id="hDv-NL-YN3"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="haI-SX-JhM"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="top" secondItem="WtE-Hf-RWz" secondAttribute="bottom" constant="8" symbolic="YES" id="iw8-BL-tIC"/>
+                            <constraint firstItem="WtE-Hf-RWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="158" id="jlS-Mz-Orh"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="top" secondItem="WtE-Hf-RWz" secondAttribute="bottom" constant="8" symbolic="YES" id="q2B-yb-EJn"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="qCw-ZN-KNS"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="top" secondItem="WtE-Hf-RWz" secondAttribute="bottom" constant="8" symbolic="YES" id="r0G-s1-Wdd"/>
+                            <constraint firstItem="WtE-Hf-RWz" firstAttribute="top" secondItem="bG0-tx-8LI" secondAttribute="bottom" constant="8" symbolic="YES" id="r7X-oA-XFb"/>
+                            <constraint firstItem="79L-sX-cKb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="33" id="tMA-Sk-qts"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="79L-sX-cKb" secondAttribute="bottom" constant="198.5" id="yIT-18-4bA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PrintMessages" destination="79L-sX-cKb" id="FEP-QR-0fB"/>
+                        <outlet property="logo" destination="IAi-vQ-HoJ" id="D1r-h7-d7i"/>
+                        <outlet property="phoneNumberTextField" destination="bG0-tx-8LI" id="jLq-a9-pFd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="81.696428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
