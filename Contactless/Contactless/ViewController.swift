@@ -11,7 +11,6 @@ import FlagPhoneNumber
 class ViewController: UIViewController {
 
 
-    @IBOutlet var logo: UIImageView!
     @IBOutlet var phoneNumberTextField: FPNTextField!
     
     @IBOutlet var PrintMessages: UILabel!
@@ -25,8 +24,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let Image: UIImage = UIImage(named: "logo")!
-        logo.image=Image
 
         title = "In Simple View"
         PrintMessages.text="Welcome to Contactless"
@@ -54,21 +51,13 @@ class ViewController: UIViewController {
         
 
         // The placeholder is an example phone number of the selected country by default. You can add your own placeholder :
-        phoneNumberTextField.hasPhoneNumberExample = true
-        phoneNumberTextField.placeholder = "Phone Number"
-
-        // Set the country list
-        //        phoneNumberTextField.setCountries(including: [.ES, .IT, .BE, .LU, .DE])
-
-        // Exclude countries from the list
-        //        phoneNumberTextField.setCountries(excluding: [.AM, .BW, .BA])
-
+        phoneNumberTextField.displayMode = .list // .picker by default
+        phoneNumberTextField.flagButtonSize = CGSize(width: 60, height: 60)
         // Set the flag image with a region code
-        phoneNumberTextField.setFlag(countryCode: .FR)
-
-        // Set the phone number directly
-        phoneNumberTextField.set(phoneNumber: "+33612345678")
-
+        phoneNumberTextField.setFlag(countryCode: .IN)
+        phoneNumberTextField.hasPhoneNumberExample = false // true by default
+        phoneNumberTextField.placeholder = "Phone Number"
+        
         view.addSubview(phoneNumberTextField)
 
         phoneNumberTextField.center = view.center
